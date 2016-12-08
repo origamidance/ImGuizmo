@@ -834,7 +834,7 @@ namespace ImGuizmo
          }
          drawList->AddPolyline(circlePos, halfCircleSegmentCount, colors[3 - axis], false, 2, true);
       }
-      drawList->AddCircle(worldToPos(gContext.mModel.v.position, gContext.mViewProjection), 0.06f * io.DisplaySize.x, colors[0], 64);
+      drawList->AddCircle(worldToPos(gContext.mModel.v.position, gContext.mViewProjection), 0.12f * io.DisplaySize.x, colors[0], 64, 2);
 
       if (gContext.mbUsing)
       {
@@ -1043,7 +1043,7 @@ namespace ImGuizmo
 
       vec_t deltaScreen = { io.MousePos.x - gContext.mScreenSquareCenter.x, io.MousePos.y - gContext.mScreenSquareCenter.y, 0.f, 0.f };
       float dist = deltaScreen.Length();
-      if (dist >= 0.058f * io.DisplaySize.x && dist < 0.062f * io.DisplaySize.x)
+      if (dist >= 0.118f * io.DisplaySize.x && dist < 0.122f * io.DisplaySize.x)
          type = ROTATE_SCREEN;
 
       const vec_t planNormals[] = { gContext.mModel.v.right, gContext.mModel.v.up, gContext.mModel.v.dir};
